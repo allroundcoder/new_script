@@ -3,16 +3,15 @@
 # Name:        new_script
 # Purpose:     Generate new script based on a template
 #
-# Author:      roloon
+# Author:      allroundcoder
 #
-# Created:     04/07/2018
-# Copyright:   (c) roloon 2018
-# Licence:     <your licence>
+# Created:     2018-10-17
+# Copyright:   (c) allroundcoder 2018
+# Licence:     Mozilla Public License 2.0
 #-------------------------------------------------------------------------------
 import argparse
-import os, fnmatch
+import os
 import shutil
-import pdb
 
 def select_something(level,folder):
     selection = None
@@ -67,7 +66,6 @@ def main():
     for s in args.subdir:
         template_dir = os.path.join(template_dir, s)
     
-
     if not os.path.exists(template_dir):
         print("ERROR:  template dir {} does not exist!".format(template_dir))
         exit(1)
